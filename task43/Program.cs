@@ -16,26 +16,23 @@ void FindingAnIntersection() {
     string? inputValue = System.Console.ReadLine();
     double[] ReceivedNumbers = inputValue.Split(new[] {','}).Select(double.Parse).ToArray();
     
-    if(ReceivedNumbers.Length > 4) {
-        System.Console.WriteLine("Введено неверное количество значений! Вводите не более 4 чисел!");
-    } else {
 
-        b1 = ReceivedNumbers[count];
-        count++;
-        k1 = ReceivedNumbers[count];
-        count++;
-        b2 = ReceivedNumbers[count];
-        count++;
-        k2 = ReceivedNumbers[count];
+    b1 = ReceivedNumbers[count];
+    count++;
+    k1 = ReceivedNumbers[count];
+    count++;
+    b2 = ReceivedNumbers[count];
+    count++;
+    k2 = ReceivedNumbers[count];
 
-        double x = -(b1 - b2) / (k1 - k2);
-        double y = k1 * x + b1;
+    double x = -(b1 - b2) / (k1 - k2);
+    double y = k1 * x + b1;
 
-        x = Math.Round(x, 3);
-        y = Math.Round(y, 3);
+    x = Math.Round(x, 3);
+    y = Math.Round(y, 3);
 
-        System.Console.WriteLine("Точка пересечания: "+ x + ":" + y);
-    }
+    System.Console.WriteLine("Точка пересечания: "+ x + ":" + y);
 }
+
 
 FindingAnIntersection();
